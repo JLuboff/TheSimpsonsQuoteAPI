@@ -1,0 +1,15 @@
+{
+  "name": "thesimpsonsquoteapi",
+  "version": "1.0.0",
+  "description": "A quote API serving quotes from The Simpsons",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Luboff",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.28"
+  }
+}
