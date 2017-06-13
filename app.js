@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 var app = express();
 
-MongoClient.connect(`mongodb://test:test@ds123752.mlab.com:23752/simpsonsquotes`, (err, db) => {
+MongoClient.connect(`mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASS}@ds123752.mlab.com:23752/simpsonsquotes`, (err, db) => {
   if(err) throw err;
 
   app.get('/quotes', (req, res) => {
@@ -22,7 +22,7 @@ MongoClient.connect(`mongodb://test:test@ds123752.mlab.com:23752/simpsonsquotes`
   });
 
 
-  
+
   app.listen(port, () =>{
     console.log(`Listening on port ${port}`);
   });
