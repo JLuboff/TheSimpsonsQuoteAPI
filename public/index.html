@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Simpsons Quote API -- Written by Jason Luboff </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <img src="/images/simpsons.png" />
+    <h1>Quote API -- Usage </h1>
+    <h3>In your JSON request use the following URL:</h3>
+    <h4>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          For basic usage with one quote on return:
+        </div>
+        <div class="col-lg-4">
+          https://thesimpsonsquoteapi.glitch.me/quotes
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          For multiple quotes, replace num with the number of quotes you'd like:
+        </div>
+        <div class="col-lg-4">
+          https://thesimpsonsquoteapi.glitch.me/quotes?count=num
+        </div>
+      </div>
+
+      <div class="row example">
+        <div class="col-lg-2 col-lg-offset-2">
+          Example returned JSON:
+        </div>
+        <div class="col-lg-5">
+          <pre>
+            [
+            {
+              "quote": "Shoplifting is a victimless crime, like punching someone in the dark.",
+              "character": "Nelson Muntz"
+            }
+            ]
+          </pre>
+        </div>
+      </div>
+
+    </h4>
+  </div>
+</body>
+</html>

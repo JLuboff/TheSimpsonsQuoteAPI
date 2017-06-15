@@ -4,6 +4,8 @@ const port = process.env.PORT || 3000;
 
 var app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 MongoClient.connect(`mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASS}@ds123752.mlab.com:23752/simpsonsquotes`, (err, db) => {
   if(err) throw err;
 
@@ -11,7 +13,7 @@ MongoClient.connect(`mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASS}
     let num = Number(req.query.count);
 
     num = !num ? 1 : num > 10 ? 10: num;
-    db.collection('quotes').aggregate([{ $sample : {size : num }}], (err, doc) => {
+    db.collection('quotes').aggregate([{ $sample : {size : num }}, {$project: {_id: 0, author: 1, quote: 1, image: 1}}], (err, doc) => {
       res.setHeader('Content-Type', 'application/json');
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

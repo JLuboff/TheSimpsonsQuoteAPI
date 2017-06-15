@@ -1,78 +1,202 @@
 {
   {
     "quote": "They taste like...burning.",
-    "author": "Ralph Wiggum"
+    "character": "Ralph Wiggum"
   },
   {
     "quote": "My eyes! The goggles do nothing!",
-    "author": "-Radioactive Man"
+    "character": "Radioactive Man"
   },
   {
     "quote": "Hello, Simpson. I'm riding the bus today becuase Mother hid my car keys to punish me for talking to a woman on the phone. She was right to do it.",
-    "author": "-Principal Skinner"
+    "character": "Principal Skinner"
   },
   {
     "quote": "I live in a single room above a bowling alley...and below another bowling alley.",
-    "author": "-Frank Grimes"
+    "character": "Frank Grimes"
   },
   {
     "quote": "All I'm gonna use this bed for is sleeping, eating and maybe building a little fort.",
-    "author": "-Homer Simpson"
+    "character": "Homer Simpson"
   },
   {
     "quote": "In theory, Communism works! In theory.",
-    "author": "-Homer Simpson"
+    "character": "Homer Simpson"
   },
   {
     "quote": "Oh, wow, windows. I don't think I could afford this place.",
-    "author": "-Otto"
+    "character": "Otto"
   },
   {
     "quote": "Remember the time he ate my goldfish? And you lied and said I never had a goldfish. Then why did I have the bowl, Bart? Why did I have the bowl?",
-    "author": "-Milhouse Van Houten"
+    "character": "Milhouse Van Houten"
   },
   {
     "quote": "Shoplifting is a victimless crime, like punching someone in the dark.",
-    "author": "-Nelson Muntz"
+    "character": "Nelson Muntz"
   },
   {
     "quote": "Ah, be creative. Instead of making sandwhiches with bread, use Pop-Tarts. Instead of chewing gum, chew bacon.",
-    "author": "-Dr. Nick"
+    "character": "Dr. Nick"
   },
   {
     "quote": "I can't even say the word 'titmouse' without gigggling like a schoolgirl.",
-    "author": "-Homer Simpson"
+    "character": "Homer Simpson"
   },
   {
     "quote": "You're turning me into a criminal when all I want to be is a petty thug.",
-    "author": "-Bart Simpson"
+    "character": "Bart Simpson"
   },
   {
     "quote": "Why are you pleople avoiding me? Does my withered face remind you of the grim specter of death?",
-    "author": "-Abe Simpson"
+    "character": "Abe Simpson"
   },
   {
     "quote": "Last night's 'Itchy and Scratchy' was, without a doubt, the worst episode ever. Rest assured that I was on the Internet within minutes, registering my disgust throughout the world.",
-    "author": "-Comicbook Guy"
+    "character": "Comicbook Guy"
   },
   {
     "quote": "Hey, I'm the chief here. Bake him away, toys.",
-    "author": "-Chief Wiggum"
+    "character": "Chief Wiggum"
   },
   {
     "quote": "Ahh! Sweet liquor eases the pain.",
-    "author": "-Troy McClure"
+    "character": "Troy McClure"
   },
   {
     "quote": "Me fail English? That's unpossible.",
-    "author": "-Ralph Wiggum"
+    "character": "Ralph Wiggum"
   },
   {
     "quote": "These are my only friends...grown-up nerds like Gore Vidal. And even he's kissed more boys than I ever will.",
-    "author": "-Lisa Simpson"
+    "character": "Lisa Simpson"
   },
   {
     "quote": "I don't want to sound like a killjoy, but becuase this is not to my taste I don't think anyone else should be allowed to enjoy it.",
-    "author": "-Marge Simpson"
+    "character": "Marge Simpson"
+  },
+  {
+    "quote": "When I look at people I don't see colors; I just see crackpot religions.",
+    "character": "Chief Wiggum"
+  },
+  {
+    "quote": "By chilling my loins I increase the chances of impregnating my wife.",
+    "character": "Apu Nahasapeemapetilon"
+  },
+  {
+    "quote": "Inflammable means flammable? What a country!",
+    "character": "Dr. Nick"
+  },
+  {
+    "quote": "I believe the children are the future... Unless we stop them now!",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "Facts are meaningless. You could use facts to prove anything that's even remotely true.",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "And this is the snack holder where I can put my beverage or, if you will, cupcake.",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "Doughnuts? I told you I don't like ethnic food",
+    "character": "Mr. Burns"
+  },
+  {
+    "quote": "I think women and seamen don't mix",
+    "character": "Waylon Smithers"
+  },
+  {
+    "quote": "Yeah. Call this an unfair generalization if you must.. but old people are no good at everything",
+    "character": "Moe Szyslak"
+  },
+  {
+    "quote": "Shut up, brain. I got firends now. I don't need you anymore.",
+    "character": "Lisa Simpson"
+  },
+  {
+    "quote": "Can't we have one meeting that doesn't end with us digging up a corpse?",
+    "character": "Mayor Quimby"
+  },
+  {
+    "quote": "Nothing you say can upset us. We're the MTV generation.",
+    "character": "Bart Simpson"
+  },
+  {
+    "quote": "I used to be with it. But then they changed what it was. Now what I'm with isn't it, and what's it seems scary and wierd. It'll happen to you.",
+    "character": "Abe Simpson"
+  },
+  {
+    "quote": "Last night's \"Itchy & Scratchy\" was, without a doubt, the worst episode ever. Rest assured that I was on the Internet within minutes, registering my disgust throughout the world.",
+    "character": "Comic Book Guy"
+  },
+  {
+    "quote": "Ahh! Sweet liquor eases the pain.",
+    "character": "Troy McClure"
+  },
+  {
+    "quote": "For once maybe someone will call me \"sir\" without adding, \"You're making a scene.\"",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "But my mom says I'm cool.",
+    "character": "Milhouse Van Houten"
+  },
+  {
+    "quote": "Oh boy, sleep! That's where I'm a viking!",
+    "character": "Ralph Wiggum"
+  },
+  {
+    "quote": "Marriage is like a coffin and each kid is another nail.",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "Well, I'm better than dirt. Well, most kinds of dirt. I mean not that fancy store bought dirt. That stuffs loaded with nutrients. I.. I can't compete with that stuff.",
+    "character": "Moe Szyslak"
+  },
+  {
+    "quote": "That's where I saw the leprechaun...He told me to burn things.",
+    "character": "Ralph Wiggum"
+  },
+  {
+    "quote": "Hi, Super Nintendo Chalmers!",
+    "character": "Ralph Wiggum"
+  },
+  {
+    "quote": "Eat my shorts",
+    "character": "Bart Simpson"
+  },
+  {
+    "quote": "Gah, stupid sexy Flanders!",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "Back in Edinburg, we had a coal miners strike. All we wanted were hats with a wee light on top. Then one day the mine collapsed. No one made it out alive, not even Willie!",
+    "character": "Groundskeeper Willie"
+  },
+  {
+    "quote": "Thank you. Come again.",
+    "character": "Apu Nahasapeemapetilon"
+  },
+  {
+    "quote": "When I catch you, I'm gonna pull out your eyes and stick 'em down your pants so you can watch me kick the crap outta you, okay? Next I'm gonna use your tongue to paint my boat!",
+    "character": "Moe Szyslak"
+  },
+  {
+    "quote": "Oh, so they have Internet on computers now!",
+    "character": "Homer Simpson"
+  },
+  {
+    "quote": "Oh Yeah!",
+    "character": "Duffman"
+  },
+  {
+    "quote": "I'm sleeping in the bath tub.",
+    "character": "Marge Simpson"
+  },
+  {
+    "quote": "I hope I didn't brain my damage.",
+    "character": "Homer Simpson"
   }
 }
