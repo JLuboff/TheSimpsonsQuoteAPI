@@ -1,0 +1,64 @@
+# TheSimpsonsQuoteAPI
+
+See for full usage: https://thesimpsonsquoteapi.glitch.me/
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <img class="img-responsive center-block" src="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2Fsimpsons.PNG?1497481539770" />
+    <h1 class="unselectable">Quote API -- Usage </h1>
+    <h3 class="unselectable">In your JSON request use the following URL:</h3>
+    <h4>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2 unselectable">
+          For basic usage with one quote on return:
+        </div>
+        <div class="col-lg-4">
+          <pre>https://thesimpsonsquoteapi.glitch.me/quotes</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2 unselectable">
+          For multiple quotes, replace num with the number of quotes you'd like:
+        </div>
+        <div class="col-lg-4">
+          <pre>https://thesimpsonsquoteapi.glitch.me/quotes?count=num</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 unselectable">
+          The returned JSON data will contain four properties including the quote, the character who said the quote, an image of the character, and the direction in which the character is facing.
+        </div>
+      </div>
+      <div class="row example">
+        <div class="col-lg-4 col-lg-offset-2 unselectable">
+          Example returned JSON:
+        </div>
+        <div class="col-lg-4">
+          <pre>
+[
+  {
+   "quote": "Shoplifting is a victimless crime, like punching someone in the dark.",
+   "character": "Nelson Muntz",
+   "image" : "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNelsonMuntz.png?1497567511185",
+   "characterDirection" : "Left"
+  }
+]
+          </pre>
+        </div>
+      </div>
+    </h4>
+    <div class="container">
+    <nav class="navbar fixed-bottom navbar-light bg-faded unselectable">
+    Created and coded by Jason Luboff
+    </nav>
+  </div>
+  </div>
+</body>
+</html>
