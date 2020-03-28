@@ -30,7 +30,7 @@ https://thesimpsonsquoteapi.glitch.me/quotes?count=num
 ]
 ```
 -------------
-# SDK and Packages
+# API Wrappers
 
 # NodeJs
 https://www.npmjs.com/package/simpsons-quote-api
