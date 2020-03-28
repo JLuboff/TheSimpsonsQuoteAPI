@@ -47,9 +47,9 @@ logData()
 
 
 # GoLang
-https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO
+https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO
 ## Usage
-`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO/src`
+`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO/src`
 ```go
 package main
 import (
