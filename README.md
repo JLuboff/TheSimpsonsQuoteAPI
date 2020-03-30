@@ -1,47 +1,25 @@
 # TheSimpsonsQuoteAPI
-
+--------------
 See for full usage: https://thesimpsonsquoteapi.glitch.me/
 
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+![](https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2Fsimpsons.PNG?1497481539770)
 
-</head>
-<body>
-  <div class="container-fluid">
-    <img class="img-responsive center-block" src="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2Fsimpsons.PNG?1497481539770" />
-    <h1 class="unselectable">Quote API -- Usage </h1>
-    <h3 class="unselectable">In your JSON request use the following URL:</h3>
-    <h4>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2 unselectable">
-          For basic usage with one quote on return:
-        </div>
-        <div class="col-lg-4">
-          <pre>https://thesimpsonsquoteapi.glitch.me/quotes</pre>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2 unselectable">
-          For multiple quotes, replace num with the number of quotes you'd like:
-        </div>
-        <div class="col-lg-4">
-          <pre>https://thesimpsonsquoteapi.glitch.me/quotes?count=num</pre>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 unselectable">
-          The returned JSON data will contain four properties including the quote, the character who said the quote, an image of the character, and the direction in which the character is facing.
-        </div>
-      </div>
-      <div class="row example">
-        <div class="col-lg-4 col-lg-offset-2 unselectable">
-          Example returned JSON:
-        </div>
-        <div class="col-lg-4">
-          <pre>
+# Quote API -- Usage
+-------------
+#### In your JSON request use the following URL:
+###### For basic usage with one quote on return:
+```
+https://thesimpsonsquoteapi.glitch.me/quotes
+```
+
+###### For multiple quotes, replace num with the number of quotes you'd like:
+```
+https://thesimpsonsquoteapi.glitch.me/quotes?count=num
+```
+
+###### The returned JSON data will contain four properties including the quote, the character who said the quote, an image of the character, and the direction in which the character is facing.
+###### Example returned JSON: 
+```json
 [
   {
    "quote": "Shoplifting is a victimless crime, like punching someone in the dark.",
@@ -50,15 +28,41 @@ See for full usage: https://thesimpsonsquoteapi.glitch.me/
    "characterDirection" : "Left"
   }
 ]
-          </pre>
-        </div>
-      </div>
-    </h4>
-    <div class="container">
-    <nav class="navbar fixed-bottom navbar-light bg-faded unselectable">
-    Created and coded by Jason Luboff
-    </nav>
-  </div>
-  </div>
-</body>
-</html>
+```
+-------------
+# SDK and Packages
+
+# NodeJs
+https://www.npmjs.com/package/simpsons-quote-api
+## Usage: 
+`npm i simpsons-quote-api`
+```js
+const simpsons = require('simpsons-quote-api')
+async function logData() {
+let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
+console.log(data)
+}
+logData()
+```
+
+
+# GoLang
+https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO
+## Usage
+`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO/src`
+```go
+package main
+import (
+	"fmt"
+	"log"
+	simpsons "simpsons/simpsons"
+)
+
+func main() {
+	data, err := simpsons.GetQuotes("0")
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Println(data[0].Quote)
+}
+```
