@@ -30,7 +30,7 @@ https://thesimpsonsquoteapi.glitch.me/quotes?count=num
 ]
 ```
 -------------
-# SDK and Packages
+# API Wrappers
 
 # NodeJs
 https://www.npmjs.com/package/simpsons-quote-api
@@ -38,18 +38,21 @@ https://www.npmjs.com/package/simpsons-quote-api
 `npm i simpsons-quote-api`
 ```js
 const simpsons = require('simpsons-quote-api')
-async function logData() {
-let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
-console.log(data)
-}
-logData()
+simpsons.getQuotes("0")
+    .then((q) => {
+        console.log(q)
+    }).catch((e) => {
+        console.error(e)
+    })
 ```
 
 
 # GoLang
-https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO
+
+https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO
 ## Usage
-`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-GO/src`
+`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO/src`
+
 ```go
 package main
 import (
