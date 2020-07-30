@@ -33,25 +33,41 @@ https://thesimpsonsquoteapi.glitch.me/quotes?count=num
 # API Wrappers
 
 # NodeJs
-https://www.npmjs.com/package/simpsons-quote-api
-## Usage: 
-`npm i simpsons-quote-api`
+https://github.com/HPaulson/Simpsons-Quotes
+### Usage
+
+`npm install @hpaulson/simpsons-quotes  --registry=https://npm.pkg.github.com/hpaulson`
+
 ```js
-const simpsons = require('simpsons-quote-api')
+const simpsons = require('@hpaulson/simpsons-quotes')
+
 simpsons.getQuotes("0")
     .then((q) => {
         console.log(q)
     }).catch((e) => {
         console.error(e)
     })
+
+```
+Data Structure:
+
+```js
+require('@hpaulson/simpsons-quotes')
+    .getQuotes("#") // Promise<Array, QuoteObject>
+
+QuoteObject = {
+    quote // String<Quote>
+    image // String<ImageLink>
+    character // String<Character>
+    characterDirection // String<left | right>
+}
 ```
 
-
 # GoLang
+https://github.com/HPaulson/Go-Simpsons-Quotes/
+### Usage
 
-https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO
-## Usage
-`go get https://github.com/C0braD3v/TheSimpsonsQuoteAPI-WRAPPER-GO/src`
+`go get https://github.com/HPaulson/Go-Simpsons-Quotes/src`
 
 ```go
 package main
@@ -67,5 +83,19 @@ func main() {
 		log.Println(err)
 	}
 	fmt.Println(data[0].Quote)
+}
+```
+Data Structure:
+
+```go
+simpsons {
+	GetQuotes("<INT>") // Array<{data}>
+}
+	
+data {
+	Quote // String<Quote>
+	Image // String<IMG_URL>
+	Character // String<Character>
+	CharacterDirection // String<Left | Right>
 }
 ```
