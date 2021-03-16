@@ -13,23 +13,26 @@ MongoClient.connect(
 
     app.get('/quotes', (req, res) => {
       const db = client.db('simponsquotes');
-      let num = Number(req.query.count);
+      let num = Number(req.query.count) || 1;
 
-      num = !num ? 1 : num > 10 ? 10 : num;
+      num = num > 10 ? 10 : num;
       db.collection('quotes').aggregate(
         [
           { $sample: { size: num } },
           {
             $project: {
               _id: 0,
-              author: 1,
+              character: 1,
               quote: 1,
               image: 1,
               characterDirection: 1,
             },
           },
         ],
-        (err, doc) => {
+        async (error, docCursor) => {
+          if (error) throw error;
+          const documents = [];
+          await docCursor.forEach((document) => documents.push(document));
           res.setHeader('Content-Type', 'application/json');
           res.header('Access-Control-Allow-Origin', '*');
           res.header(
@@ -37,7 +40,7 @@ MongoClient.connect(
             'Origin, X-Requested-With, Content-Type, Accept'
           );
 
-          res.send(doc);
+          res.send(documents);
         }
       );
     });
