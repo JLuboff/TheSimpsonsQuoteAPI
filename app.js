@@ -7,12 +7,12 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 MongoClient.connect(
-  `mongodb+srv://${process.env.MONGOUSER}:${process.env.MONGOPASS}@jl.qmwzj.mongodb.net/`,
+  `mongodb+srv://${process.env.MONGOUSER}:${process.env.MONGOPASS}@jl.qmwzj.mongodb.net/simpsonsquotes`,
   (err, client) => {
     if (err) throw err;
 
     app.get('/quotes', (req, res) => {
-      const db = client.db('simponsquotes');
+      const db = client.db('simpsonsquotes');
       let num = Number(req.query.count) || 1;
 
       num = num > 10 ? 10 : num;
