@@ -6,26 +6,44 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-MongoClient.connect(`mongodb://${process.env.MONGOUSER}:${process.env.MONGOPASS}@ds123752.mlab.com:23752/simpsonsquotes`, (err, db) => {
-  if(err) throw err;
+MongoClient.connect(
+  `mongodb+srv://${process.env.MONGOUSER}:${process.env.MONGOPASS}@jl.qmwzj.mongodb.net/`,
+  (err, client) => {
+    if (err) throw err;
 
-  app.get('/quotes', (req, res) => {
-    let num = Number(req.query.count);
+    app.get('/quotes', (req, res) => {
+      const db = client.db('simponsquotes');
+      let num = Number(req.query.count);
 
-    num = !num ? 1 : num > 10 ? 10: num;
-    db.collection('quotes').aggregate([{ $sample : {size : num }}, {$project: {_id: 0, author: 1, quote: 1, image: 1, characterDirection: 1}}], (err, doc) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      num = !num ? 1 : num > 10 ? 10 : num;
+      db.collection('quotes').aggregate(
+        [
+          { $sample: { size: num } },
+          {
+            $project: {
+              _id: 0,
+              author: 1,
+              quote: 1,
+              image: 1,
+              characterDirection: 1,
+            },
+          },
+        ],
+        (err, doc) => {
+          res.setHeader('Content-Type', 'application/json');
+          res.header('Access-Control-Allow-Origin', '*');
+          res.header(
+            'Access-Control-Allow-Headers',
+            'Origin, X-Requested-With, Content-Type, Accept'
+          );
 
-      res.send(doc);
+          res.send(doc);
+        }
+      );
+    });
 
-    })
-  });
-
-
-
-  app.listen(port, () =>{
-    console.log(`Listening on port ${port}`);
-  });
-});
+    app.listen(port, () => {
+      console.log(`Listening on port ${port}`);
+    });
+  }
+);
