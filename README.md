@@ -6,19 +6,32 @@ See for full usage: https://thesimpsonsquoteapi.glitch.me/
 
 # Quote API -- Usage
 -------------
-#### In your JSON request use the following URL:
-###### For basic usage with one quote on return:
+### In your JSON request use the following URL:
+
+
+#### For basic usage with one quote on return:
 ```
 https://thesimpsonsquoteapi.glitch.me/quotes
 ```
 
-###### For multiple quotes, replace num with the number of quotes you'd like:
+#### For multiple quotes, you can provide a `count` query with the number of quotes you'd like:
 ```
 https://thesimpsonsquoteapi.glitch.me/quotes?count=num
 ```
 
-###### The returned JSON data will contain four properties including the quote, the character who said the quote, an image of the character, and the direction in which the character is facing.
-###### Example returned JSON: 
+#### For filtered character quotes, you can provide a `character` query and part or all of their name:
+```
+https://thesimpsonsquoteapi.glitch.me/quotes?character=ho //Would return a quote from Homer or Milhouse
+https://thesimpsonsquoteapi.glitch.me/quotes?character=homer simpson //Would return a quote only from Homer
+```
+
+#### For filtered character and multiple quotes, you can provide a `character` and `num` query:
+```
+https://thesimpsonsquoteapi.glitch.me/quotes?count=15&character=ho //Would return up to 15 quotes from Homer and Milhouse
+```
+
+#### The returned JSON data will contain four properties including the quote, the character who said the quote, an image of the character, and the direction in which the character is facing.
+#### Example returned JSON: 
 ```json
 [
   {
