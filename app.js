@@ -52,6 +52,10 @@ app.get('/quotes', async (req, res) => {
      */
     const documents = await db.collection('quotes').aggregate(aggregate).toArray();
     /**
+     * Close the connection to the database
+     */
+    client.close();
+    /**
      * Send the quotes to the client
      */
     res.setHeader('Content-Type', 'application/json');
