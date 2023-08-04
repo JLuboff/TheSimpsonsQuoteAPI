@@ -112,3 +112,9 @@ data {
 	CharacterDirection // String<Left | Right>
 }
 ```
+# Docker-Compose
+### Run this locally
+
+```
+docker-compose build && docker-compose up
+```

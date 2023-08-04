@@ -1,0 +1,27 @@
+body {
+  background: #16a085;
+    padding-top: 75px;
+}
+
+.container-fluid {
+  text-align: center;
+  color: #FEFB1E;
+}
+
+.row {
+  text-align: left;
+  margin-top: 5px;
+}
+
+.example {
+  margin-top: 15px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
