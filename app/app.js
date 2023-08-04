@@ -15,7 +15,7 @@ async function loadData() {
   try {
     const client = await MongoClient.connect(url, { useNewUrlParser: true });
     const db = client.db('simpsonsquotes'); // Change 'mydb' to your desired database name
-    const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, '/app/init_data/quotes.json'), 'utf8'));
+    const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, `/app/init_data/${process.env.DATAFILE}.json`), 'utf8'));
 
     await db.collection('quotes').insertMany(data); // Change 'mycollection' to your desired collection name
     console.log('Data imported successfully!');

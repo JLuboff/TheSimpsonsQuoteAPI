@@ -23,6 +23,8 @@ ENV MONGOUSER=root
 ENV MONGOPASS=example
 ENV MONGOPORT=27017
 
+ENV DATAFILE="quotes_big"
+
 # Step 6: Expose the application's port
 EXPOSE 3000
 
