@@ -1,18 +1,40 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
+const fs = require('fs');
+const path = require('path');
 const port = process.env.PORT || 3000;
 
 const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
+const url = 'mongodb://root:example@mongodb:27017';
+
+// Function to load data into MongoDB on startup
+async function loadData() {
+  try {
+    const client = await MongoClient.connect(url, { useNewUrlParser: true });
+    const db = client.db('simpsonsquotes'); // Change 'mydb' to your desired database name
+    const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, '/app/init_data/quotes.json'), 'utf8'));
+
+    await db.collection('quotes').insertMany(data); // Change 'mycollection' to your desired collection name
+    console.log('Data imported successfully!');
+    client.close();
+  } catch (err) {
+    console.error('Error importing data:', err);
+  }
+}
+
+// Call the data loading method on server startup
+loadData();
+
 app.get('/quotes', async (req, res) => {
   try {
     /**
      * Connect to the database
      */
-    const client = await MongoClient.connect(
-      `mongodb+srv://${process.env.MONGOUSER}:${process.env.MONGOPASS}@jl.qmwzj.mongodb.net/simpsonsquotes`
+    const client = await MongoClient.connect(     
+      `mongodb://root:example@mongodb:27017`
     );
     const db = client.db('simpsonsquotes');
     /**
