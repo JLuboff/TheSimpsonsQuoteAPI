@@ -29,8 +29,15 @@ app.get('/quotes', (req, res) => {
     // Shuffle the array of quotes
     const shuffledQuotes = shuffleArray(quotes);
 
+    // Filter quotes based on partial character matching
+    const filteredQuotes = character
+      ? shuffledQuotes.filter((quote) =>
+          quote.character.toLowerCase().includes(character.toLowerCase())
+        )
+      : shuffledQuotes;
+
     // Select a subset of quotes
-    const selectedQuotes = shuffledQuotes.slice(0, numOfQuotes);
+    const selectedQuotes = filteredQuotes.slice(0, numOfQuotes);
 
     res.setHeader('Content-Type', 'application/json');
     res.header('Access-Control-Allow-Origin', '*');
